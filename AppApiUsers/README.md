@@ -1,4 +1,5 @@
-#INFO
+# INFO
+
 H2 database can be accessed at: http://localhost:8080/h2-console/
   Just hit connect and you will see a user you created (click table name on left and the select statement should show up)
 H2 databases are just for testing- but they make it very easy to switch out for a real sql database.
@@ -6,18 +7,21 @@ H2 databases are just for testing- but they make it very easy to switch out for 
 application endpoints of interest are: http://localhost:8080/users
                                        http://localhost:8080/login
 
+Username and email must be unique in database. Database is cleared everytime app restarts. You can add values at lauch if you add a data.sql file in the resources folder.
 
 POST to  http://localhost:8080/users  
-```{
+```
+{
 	"username": "bobbyj",
 	"email": "bob@bob.comj",
 	"password": "123234fg465"
 }
 ```
 
-Login with POST to localhost:8080/login
+Login with POST to http://localhost:8080/login
 
-```{
+```
+{
 	"email":"bob@bob.comj",
 	"password": "123234fg465"
 }
